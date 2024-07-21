@@ -107,7 +107,97 @@ MAIN PAGE
     opacity: 1;
 }
 
+/*------------------------
+ CARD
+ ---------------------------- */
 
+ .card{
+    border: solid 1px #DBDBDB ;
+    border-radius: 3px;
+    background: #FFF;
+
+ }
+ .card-header{
+    padding: 10px;
+    position: relative;
+ }
+ .card-avatar{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    border-radius: 100%;
+ }
+ .card-header-avatar{
+    padding-left: 60px;
+
+ }
+ .card-titre{
+    font-weight: bold;
+    color: #000;
+    margin: 5px 0;
+ }
+ .card-date{
+    color: rgba(0, 0, 0, .38);
+    font-size: 12px;
+ }
+ .card-body{
+    padding: 0 20px 20px 10px;
+}
+.card-body .full-width{
+    width: calc(100% + 20px); 
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.card-body p:first-child{
+    margin-top: 0;
+}
+.card-body p:last-child{
+    margin-top: 0;
+}
+.card-footer{
+    border-top: solid 1px #DBDBDB;
+    background: #F8F8F8;
+    display: flex;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #DBDBDB;
+    padding: 10px;
+    justify-content: space-between;
+}
+.card-footer a{
+    text-decoration: none;
+}
+.card-like::before,
+.card-repost::before,
+.card-comment::before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 18px;
+    margin-right: 5px;
+    background: url(img/no-like.svg) center center / 20px 18px no-repeat ;
+    transition: .3s;
+}
+.card-footer .card-comment::before{
+    background: url(img/no-comment.svg) center center / 20px 18px no-repeat ;
+}
+.card-footer .card-repost::before{
+    background: url(img/retweet.svg) center center / 20px 18px no-repeat ;
+}
+.card-comment::before:hover{
+    background: url(img/comment.svg) center center / 20px 18px no-repeat ;
+}
+.card-like::before:hover{
+    background: url(img/like.svg) center center / 20px 18px no-repeat ;
+}
+/*-----------------------------------------
+SIDE BAR
+--------------------------------------- */
+.sidebar{
+    margin-top: 40px;
+}
 @media only screen and (min-width:487px){
     .topbar{
         display: flex;
